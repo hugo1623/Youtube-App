@@ -16,8 +16,12 @@ export class HomeComponent implements OnInit {
   constructor(private youtubeService: YoutubeService) { }
 
   ngOnInit(): void {
+    this.cargarVideos();
 
-    this.youtubeService.getVideos()
+
+  }
+  cargarVideos(){
+        this.youtubeService.getVideos()
         .subscribe(resp=> {
 
           // console.log(resp);
@@ -25,6 +29,7 @@ export class HomeComponent implements OnInit {
           console.log(this.videos)
         })
   }
+
   mostrarVideo( video: Video){
 
     console.log(video)

@@ -6,7 +6,7 @@
 
 
 <div class="row row-cols-1 row-cols-md-4">
-    <div class="col mb-4" *ngFor="let video of videos">
+    <div class="col mb-4 animated fadeIn" *ngFor="let video of videos">
         <div class="card h-100">
             <img [src]="video.thumbnails.high.url" class="card-img-top" alt="...">
             <div class="card-body">
@@ -18,7 +18,7 @@
                     <strong>Publicado:</strong> {{video.publishedAt | date}}
                 </p>
                 <button class="btn btn-outline-primary btn-block" (click)="mostrarVideo(video)">
-                    Ver Video ...
+                    Ver Video 
                 </button>
             </div>
         </div>
@@ -26,8 +26,8 @@
 </div>
 <div class="row mt-5 mb-5 text-center">
     <div class="col">
-        <button class="btn btn-primary btn-lg">
-            Siguente página
+        <button class="btn btn-primary btn-lg" (click)="cargarVideos()">
+            Siguente Página
         </button>
 
     </div>
